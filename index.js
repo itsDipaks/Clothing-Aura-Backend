@@ -26,12 +26,12 @@ app.use("/cart", CartRoute);
 app.use("/",(req,res)=>{
   res.send("Welcome To clothing Aura Backend")
 })
-app.listen(process.env.PORT, async () => {
+app.listen(8400, async () => {
   try {
     await connection;
     console.log("Connected To DB");
   } catch (err) {
     console.log(err);
   }
-  console.log("Listening To Port", process.env.PORT);
+  console.log("Listening To Port");
 });
