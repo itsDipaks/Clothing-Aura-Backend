@@ -23,6 +23,9 @@ app.use("/resources/images", express.static("images"));
 app.use("/signup", SignupRoute);
 app.use("/login", LoginRoute);
 app.use("/cart", CartRoute);
+app.use("/",(req,res)=>{
+  res.send("Welcome To clothing Aura Backend")
+})
 app.listen(process.env.PORT, async () => {
   try {
     await connection;
