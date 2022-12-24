@@ -1,6 +1,6 @@
 const express = require("express");
 var cors = require("cors");
-const {connection} = require("./src/Config/db");
+const {connection} = require("./src/config/db");
 const {Member} = require("./src/Routes/Member.routes");
 const {authentication} = require("./src/Middleware/Authentication");
 const {authorization} = require("./src/Middleware/Authorization");
@@ -10,7 +10,6 @@ const {SignupRoute} = require("./src/Routes/Signup.Routes");
 const {LoginRoute} = require("./src/Routes/Login.Routes");
 const {CartRoute} = require("./src/Routes/Cart.Routes");
 const app = express();
-require("dotenv").config();
 app.get("/", (req, res) => {
   res.send("hello users");
 });
