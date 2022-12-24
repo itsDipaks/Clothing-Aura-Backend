@@ -1,14 +1,14 @@
 const express = require("express");
 var cors = require("cors");
-const {connection} = require("./Config/db");
-const {Member} = require("./Routes/Member.routes");
-const {authentication} = require("./Middleware/Authentication");
-const {authorization} = require("./Middleware/Authorization");
-const {Dashboard} = require("./Routes/Dashboard.Routes");
-const {DataRouter} = require("./Routes/Data.Routes");
-const {SignupRoute} = require("./Routes/Signup.Routes");
-const {LoginRoute} = require("./Routes/Login.Routes");
-const {CartRoute} = require("./Routes/Cart.Routes");
+const {connection} = require("./src/Config/db");
+const {Member} = require("./src/Routes/Member.routes");
+const {authentication} = require("./src/Middleware/Authentication");
+const {authorization} = require("./src/Middleware/Authorization");
+const {Dashboard} = require("./src/Routes/Dashboard.Routes");
+const {DataRouter} = require("./src/Routes/Data.Routes");
+const {SignupRoute} = require("./src/Routes/Signup.Routes");
+const {LoginRoute} = require("./src/Routes/Login.Routes");
+const {CartRoute} = require("./src/Routes/Cart.Routes");
 const app = express();
 require("dotenv").config();
 app.get("/", (req, res) => {
